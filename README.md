@@ -1,4 +1,4 @@
-# Excel palette for BeepBeep 3
+# pyGraphs library
 
 This repository contain some functions for manipulating [graphs objects](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). 
 
