@@ -1,9 +1,5 @@
 import vect
 
-G=[[],[2,5,5],[1,3,4,4],[2,3,4],[2,2,3,5],[1,1,4]]
-L=[[1,2],[1,5],[1,5],[2,3],[2,4],[2,4],[3,3],[3,4],[4,5]]
-
-
 def nbSommets(G):
     return (len(G)-1)
 
@@ -74,21 +70,3 @@ def areteToListe(n, L):
             V[L[i][0]].append(L[i][-1])
             V[L[i][-1]].append(L[i][0])
     return V
-
-#Retourne la liste de tous les degrés
-if __name__ == "__main__":
-    print("Nombre de sommet du graphe G :", nbSommets(G))
-    print("Nombre d'aretes du graphe G :", nbArete(G))
-    print("L'arete a bien été ajouté, voici le nouveau graphe :", ajouteArete(G, 4, 6))
-    print("L'arete a bien été enlevée, voici le nouveau graphe :", enleveArete(G, 1, 5))
-
-    n = 2
-    print("Voici le degré du sommet ", n , " dans le graphe G :", deg(G, 2))
-
-    print("Voici la liste des degrés du graphes G : ", degre(G))
-    print("Le graphe est il non orienté ?........ La réponse est :", nonOriente(G))
-
-    p = 5
-    print("Le graphe complet (ou de kuratowski)", p, "a pour listes d'adjacences :", kuratowski(p))
-
-    print("Voici la liste d'adjacence V associée à la liste d'arete L :", areteToListe(nbSommets(G),L))
