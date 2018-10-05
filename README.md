@@ -6,7 +6,9 @@ The librairy now contain the following files :
 
 - `vect.py`: Contains primitives for the treatment of vectors and matrices (with python's lists)
 
-- `basics.py`: Contains basics functions to manipulate graphs
+- `basicsNO.py`: Contains basics functions to manipulate non oriented graphs 
+
+- `basicsO.py`: Contains basics functions to manipulate oriented graphs 
 
 
 About the authors                                                  {#about}
