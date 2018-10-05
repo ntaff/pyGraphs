@@ -1,32 +1,4 @@
-import vect.py
-
-def listeToMatrice(G):
-    M = initMat(len(G) - 1, 0)
-    for i in range(1, len(G)):
-        for j in G[i]:
-            M[i - 1][j - 1] += 1
-    return M
-
-
-def areteToListe(n, L):
-    G = initVectList(n + 1)
-    for i in range(len(L)):
-        G[L[i][0]].append(L[i][1])
-
-    return G
-
-
-def matToListe(M):
-    G = initVectList(len(M) + 1)
-    for i in range(len(M)):
-        for j in range(len(M[i])):
-            x = M[i][j]
-            while x > 0:
-                G[i + 1].append(j + 1)
-                x = x - 1
-    return G
-
-
+import vect
 
 def nbSommets(G):
     return len(G)-1
@@ -72,39 +44,28 @@ def degreE(G):
         D.append(degE(G,i))
     return D     
 
-G=[[],[5],[1,4],[2],[3],[2,4]]
-L=[[1,5],[2,1],[2,4],[3,2],[4,3],[5,2],[5,4]]
+def listeToMatrice(G):
+    M = initMat(len(G) - 1, 0)
+    for i in range(1, len(G)):
+        for j in G[i]:
+            M[i - 1][j - 1] += 1
+    return M
 
-print(nbSommets(G))
 
-print(nbArcs(L))
+def areteToListe(n, L):
+    G = initVectList(n + 1)
+    for i in range(len(L)):
+        G[L[i][0]].append(L[i][1])
 
-ajoutArc(G,2,3)
-print(G)
-enleveArc(G,2,3)
-print(G)
+    return G
 
-L=[[1,5],[2,1],[2,4],[3,2],[4,3],[5,2],[5,4]]
 
-print(degS(G,1))
-print(degreS(G))
-
-print(degE(G,4))
-print(voisinage(G,4))
-print(degreE(G))
-
-G = [[], [5], [1, 4], [2], [3], [2, 4]]
-
-affMat(listeToMatrice(G))
-print("")
-L = [[1, 5], [2, 1], [2, 4], [3, 2], [4, 3], [5, 2], [5, 4]]
-
-print(areteToListe(5, L))
-M = [[0, 0, 0, 0, 1],
-     [1, 0, 0, 1, 0],
-     [0, 1, 0, 0, 0],
-     [0, 0, 1, 0, 0],
-     [0, 1, 0, 1, 0]]
-
-print(matToListe(M))
-
+def matToListe(M):
+    G = initVectList(len(M) + 1)
+    for i in range(len(M)):
+        for j in range(len(M[i])):
+            x = M[i][j]
+            while x > 0:
+                G[i + 1].append(j + 1)
+                x = x - 1
+    return G
