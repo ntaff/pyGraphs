@@ -70,3 +70,13 @@ def areteToListe(n, L):
             V[L[i][0]].append(L[i][-1])
             V[L[i][-1]].append(L[i][0])
     return V
+
+def matriceToListe(M):
+    V = initVectList(len(M) + 1)
+    for i in range(len(M)):
+        for j in range(len(M[i])):
+            x = M[i][j]
+            while x > 0:
+                V[i + 1].append(j + 1)
+                x = x - 1
+    return V
