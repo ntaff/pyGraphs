@@ -10,6 +10,8 @@ The librairy now contain the following files :
 
 - `basicsO.py`: Contains basics functions to manipulate oriented graphs 
 
+- `BreadthFirstSearch.py`: Implement simple and general BF search in graphs
+
 
 About the authors                                                  {#about}
 -----------------
