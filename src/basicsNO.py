@@ -1,4 +1,4 @@
-import vect
+from vect import *
 
 def nbSommets(G):
     return (len(G)-1)
