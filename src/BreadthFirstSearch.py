@@ -1,9 +1,9 @@
-from vect import *
+import lib.vector as Vector
 
 #Parcours en largeur simple à partir d'un sommet donné en paramètre
 def largeur(G, i):
     # Initialisation
-    Visite = initVect(len(G), False) #Quels sommets ont déjà été visités
+    Visite = Vector.initVect(len(G), False) #Quels sommets ont déjà été visités
     File = [i] #Liste d'attente
     ordreVisite = [] #Ordre de visite des sommets
     Visite[i] = True  # On traite premier sommet
