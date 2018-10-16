@@ -1,4 +1,4 @@
-import lib.vector as Vector
+import lib.vect as Vector
 
 def profRec(G, i, Visite, ordreVisite):
 
