@@ -1,4 +1,4 @@
-from vect import *
+import lib.vect as Vector
 
 def nbSommets(G):
     return (len(G)-1)
@@ -27,7 +27,7 @@ def deg(G, i):
 
 
 def degre(G):
-    V = initVect((len(G)-1), 0)
+    V = Vector.initVect((len(G)-1), 0)
     print(V)
     for sommet in range(1, len(G)):
         V[sommet-1]=deg(G, sommet)
@@ -36,7 +36,7 @@ def degre(G):
 
 def listeToMatrice(G):
 
-    matAdj = initMat((len(G) - 1), 0)
+    matAdj = Vector.initMat((len(G) - 1), 0)
     for i in range(1,len(matAdj)):
         for j in range(1, len(matAdj[i])):
             for k in G[i+1]:
@@ -55,7 +55,7 @@ def nonOriente(G):
 
 
 def kuratowski(n):
-    V = initVectList(n+1)
+    V = Vector.initVectList(n+1)
     for i in range(1, n+1):
         for j in range(1, n+1):
             if i == j:
@@ -65,14 +65,14 @@ def kuratowski(n):
     return V
 
 def areteToListe(n, L):
-    V = initVectList(n)
+    V = Vector.initVectList(n)
     for i in range(0,len(L)):
             V[L[i][0]].append(L[i][-1])
             V[L[i][-1]].append(L[i][0])
     return V
 
 def matriceToListe(M):
-    V = initVectList(len(M) + 1)
+    V = Vector.initVectList(len(M) + 1)
     for i in range(len(M)):
         for j in range(len(M[i])):
             x = M[i][j]
