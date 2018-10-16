@@ -1,4 +1,4 @@
-from vect import *
+import lib.vect as Vector
 
 def nbSommets(G):
     return len(G)-1
@@ -45,7 +45,7 @@ def degreE(G):
     return D     
 
 def listeToMatrice(G):
-    M = initMat(len(G) - 1, 0)
+    M = Vector.initMat(len(G) - 1, 0)
     for i in range(1, len(G)):
         for j in G[i]:
             M[i - 1][j - 1] += 1
@@ -53,7 +53,7 @@ def listeToMatrice(G):
 
 
 def areteToListe(n, L):
-    G = initVectList(n + 1)
+    G = Vector.initVectList(n + 1)
     for i in range(len(L)):
         G[L[i][0]].append(L[i][1])
 
@@ -61,7 +61,7 @@ def areteToListe(n, L):
 
 
 def matToListe(M):
-    G = initVectList(len(M) + 1)
+    G = Vector.initVectList(len(M) + 1)
     for i in range(len(M)):
         for j in range(len(M[i])):
             x = M[i][j]
