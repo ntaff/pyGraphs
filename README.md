@@ -43,8 +43,8 @@ The librairy now contain the following files :
    
 6. `searchApplicationsNO.py`: Implement simple and generalized DF search in graphs 
    - `isConnexe(G)`: Return true if G is connected
-   - `cyclicRec(G, pere, visite, cycle)`: Recursive cyclic detection function
-   - `isCyclic(G)`: Return true if G have one cycle
+   - `cyclicRec(G, pere, visite, cycle)`: Recursive cycles detection function
+   - `isCyclic(G)`: Return true if G have, at least, one cycle
    - `isArbre(G)`: Return true if G is a tree (connected graph without cycles)
 
 
