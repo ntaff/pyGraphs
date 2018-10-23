@@ -46,6 +46,7 @@ The librairy now contain the following files :
    - `cyclicRec(G, pere, visite, cycle)`: Recursive cycles detection function
    - `isCyclic(G)`: Return true if G have, at least, one cycle
    - `isArbre(G)`: Return true if G is a tree (connected graph without cycles)
+   - `plusCourtChemin(G, i)`: Return the distance between node i and all others nodes in G, and the predecessor of each one
 
 
 About the authors                                                  {#about}
