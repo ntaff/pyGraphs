@@ -39,3 +39,29 @@ def isArbre(G):
 
     #Un graphe est un arbre si il est connexe mais pas cyclique.
     return isConnexe(G) and not is_cyclic(G) 
+
+
+def plusCourtChemin(G, i):
+
+    #Retourne les plus courts chemins issus du sommet i vers les autres sommets
+    Visite = initVect(len(G), 0) #On initialise les vecteurs Visite
+    Pere = initVect(len(G), 0) #Et père à 0
+    Distance = initVect(len(G),-1) #On initialise le vecteur Distance à l'infini (ici -1)
+    Distance[i] = 0 #La distance d'un sommet à lui même est nulle
+    Pere[i] = i #Son père est lui même
+    File = [i] #La file d'attente contient i
+    Visite[i]=1 #Et on considère le sommet de départ comme visité
+    while len(File) != 0: #Tant que la file d'attente n'est pas vide
+        y = File.pop(0) #On retire y de la liste
+        #On visite y
+        for z in G[y]: #Pour tout les voisins de y
+            if Visite[z] == 0: #Si on a pas visité le sommet
+                Visite[z] = 1 #On le visite (lol)
+                File.append(z) #On ajoute le voisin à la liste d'attente
+                Distance[z] = Distance[y]+1 #On actualise le vecteur distance
+                Pere[z]=y #On actualise le vecteur des pères
+                #On ajoute z à la liste d'attente
+            else:
+                #Revisite de z
+                pass
+    return Distance, Pere #On retourne les vecteurs Distance et Père
