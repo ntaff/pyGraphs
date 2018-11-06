@@ -65,3 +65,30 @@ def plusCourtChemin(G, i):
                 #Revisite de z
                 pass
     return Distance, Pere #On retourne les vecteurs Distance et Père
+
+
+def is_biparti(G):
+    X=[]
+    Y=[]
+    Visite=initVect(len(G),0)
+    File=[]
+    for i in range(1,len(G)):
+        if Visite[i]==0:
+            Visite[i]=1
+            File.append(i)
+            X.append(i)
+            while len(File)!=0:
+                 y=File.pop()
+                 for z in G[y]:
+                     if Visite[z]==0:
+                         File.append(z)
+                         if Visite[y]==1:
+                             Visite[z]=2
+                             Y.append(z)
+                         else:
+                             Visite[z]=1
+                             X.append(z)
+                     else:
+                        if Visite[z]==Visite[y]:
+                            return False
+    return True,X,Y
