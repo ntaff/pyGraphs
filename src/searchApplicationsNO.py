@@ -70,7 +70,7 @@ def plusCourtChemin(G, i):
 def is_biparti(G):
     X=[]
     Y=[]
-    Visite=initVect(len(G),0)
+    Visite=Vector.initVect(len(G),0)
     File=[]
     for i in range(1,len(G)):
         if Visite[i]==0:
