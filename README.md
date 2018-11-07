@@ -41,13 +41,17 @@ The librairy now contain the following files :
    - `profond(G, i)` Return nodes visit list for the simple DF search from the i node
    - `profondG(G)` Return nodes visit list for the generalized DF search
    
-6. `searchApplicationsNO.py`: Implement simple and generalized DF search in graphs 
+6. `searchApplicationsNO.py`: Implement BF and DF applications in non oriented graphs
    - `isConnexe(G)`: Return true if G is connected
    - `cyclicRec(G, pere, visite, cycle)`: Recursive cycles detection function
    - `isCyclic(G)`: Return true if G have, at least, one cycle
    - `isArbre(G)`: Return true if G is a tree (connected graph without cycles)
    - `plusCourtChemin(G, i)`: Return the distance between node i and all others nodes in G, and the predecessor of each one
    - `is_biparti(G)`: Return true if G is bipartite, false either
+   
+7. `searchApplicationsO.py`: Implement BF and DF applications in oriented graphs
+   - `cyclicRec(G, i, Visite, cycle)`: Recursive Cycles detection function  
+   - `isCyclic(G)`: Return true if G have one cycle or more
 
 
 About the authors                                                  {#about}
