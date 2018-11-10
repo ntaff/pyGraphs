@@ -18,6 +18,7 @@ The librairy now contain the following files :
    - `kuratowski(n)` Return adjacency list Vector from the n'th Kuratowski graph
    - `areteToListe(n, L)` Transform edges list in adjacency list
    - `matriceToListe(M)` Transform adjacency matrix in adjacency list
+   - `sousG(G,i)` Return a copy of G without i 
 
 3. `basicsO.py`: Contains basics functions to manipulate oriented graphs 
    - `nbSommets(G)` Return the number of nodes from G graph
