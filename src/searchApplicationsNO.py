@@ -92,3 +92,11 @@ def is_biparti(G):
                         if Visite[z]==Visite[y]:
                             return False
     return True,X,Y
+
+    #Retourne le nombre de sommet de la composante connexe dans laquelle est i, à l'aide d'un DFS
+    def TCC(G,i):
+        Visite = Vector.initVect(len(G), 0)
+        ordreVisite = []
+        prof = Vector.initVect(len(G), 0)
+        DFS.profRec(G, i, Visite, ordreVisite, prof)
+        return len(ordreVisite)
