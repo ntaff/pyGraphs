@@ -1,4 +1,5 @@
 import lib.vect as Vector
+from copy import deepcopy
 
 def nbSommets(G):
     return (len(G)-1)
@@ -80,3 +81,10 @@ def matriceToListe(M):
                 V[i + 1].append(j + 1)
                 x = x - 1
     return V
+
+
+def sousG(G,i):
+    H = deepcopy(G)
+    while H[i]!=[]:
+        H[i].pop()
+    return H
