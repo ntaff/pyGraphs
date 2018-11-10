@@ -48,6 +48,7 @@ The librairy now contain the following files :
    - `isArbre(G)`: Return true if G is a tree (connected graph without cycles)
    - `plusCourtChemin(G, i)`: Return the distance between node i and all others nodes in G, and the predecessor of each one
    - `is_biparti(G)`: Return true if G is bipartite, false either
+   - `TCC(G,i)`: Return the number of nodes in i's connected component
    
 7. `searchApplicationsO.py`: Implement BF and DF applications in oriented graphs
    - `cyclicRec(G, i, Visite, cycle)`: Recursive Cycles detection function  
