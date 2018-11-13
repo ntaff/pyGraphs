@@ -5,7 +5,9 @@ from itertools import count, filterfalse
 # Détermine le plus petit entier >= 1 qui n’appartient pas à la liste L. On se servira de cette fonction pour déterminer
 # la plus petite couleur n’appartenant pas à la liste des couleurs interdites.
 def mini(L):
-    return next(filterfalse(set(L).__contains__, count(1)))
+    it = filterfalse(set(L).__contains__, count(1)) #Renvois le plus premier élément qui ne rempli pas la condition du
+                                                    #filtre à l'aide d'un compteur
+    return next(it) # Vu que it est un itérateur, on utilise la méthode next()
 
 
 # Détermine une coloration du graphe G par l’algorithme naïf
