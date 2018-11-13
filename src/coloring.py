@@ -50,3 +50,27 @@ def colorGlouton(G):
             S.remove(i)
         c += 1
     return color
+
+
+#détermine une coloration du graphe G par l’algorithme de Welsh et Powell.
+def colorWP(G):
+
+    color = Vector.initVect(len(G), 0)  # le vecteur des couleurs
+    color[1] = 1
+
+    # Calcul des degrés de chaque sommet
+    Deg = []
+    for i in range(1, len(G)):
+        Deg.append([i, len(G[i])])
+    # On tri par degré décroissant
+    Deg = sorted(Deg, key=lambda x: x[1], reverse=True)
+    print(Deg)
+    # On lance la coloration
+    for x in range(len(Deg)):
+        sommet=Deg[x][0]
+        S=[]
+        for j in G[sommet]:
+            if color[j]:
+                S.append(color[j])
+        color[sommet]=mini(S)
+    return color
