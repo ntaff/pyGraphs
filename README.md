@@ -54,6 +54,13 @@ The librairy now contain the following files :
 7. `searchApplicationsO.py`: Implement BF and DF applications in oriented graphs
    - `cyclicRec(G, i, Visite, cycle)`: Recursive Cycles detection function  
    - `isCyclic(G)`: Return true if G have one cycle or more
+   
+8. `coloring.py`: Implement some coloring algorithms
+   - `mini(L)`: Return the smaller integer who's not in L  
+   - `colorNaive(G)`: Implement naive coloring algorithm
+   - `noyau(L, G)`: Compute kernel of a graph G
+   - `colorGlouton(G)`: Implement greedy coloring algorithm
+   - `colorWP(G)`: Implement Welsh and Powell coloring algorithm
 
 
 About the authors                                                  {#about}
