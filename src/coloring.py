@@ -39,7 +39,7 @@ def noyau(L, G):
     return N
 
 
-# détermine une coloration du graphe G par l’algorithme glouton
+# Détermine une coloration du graphe G par l’algorithme glouton
 def colorGlouton(G):
 
     color = Vector.initVect(len(G), 0)  # On initialise le vecteur des couleurs à 0
@@ -54,7 +54,7 @@ def colorGlouton(G):
     return color
 
 
-#détermine une coloration du graphe G par l’algorithme de Welsh et Powell.
+# Détermine une coloration du graphe G par l’algorithme de Welsh et Powell.
 def colorWP(G):
 
     color = Vector.initVect(len(G), 0)  # le vecteur des couleurs
@@ -76,3 +76,42 @@ def colorWP(G):
                 S.append(color[j])
         color[sommet]=mini(S)
     return color
+
+
+# BACKTRACKING
+
+# Verifie si tous les sommets voisins sont d'une couleur differente
+def is_valid(G, i, solution):
+    
+    for x in G[i]:
+        if solution[x] == solution[i]:
+            return False
+
+    return True
+
+
+def backtracking_rec(G, colors, i, solution, solutionList):
+    if i == len(G):
+        solutionList.append(solution[:])
+    else:
+        for color in colors:
+            solution[i] = color
+            if is_valid(G, i, solution):
+                backtracking_rec(G, colors, i+1, solution, solutionList)
+            solution[i] = 0
+
+
+def backtracking(G, colors=None):
+    solutionList = []
+
+    # On a fourni une liste de couleur a tester
+    if colors:
+        backtracking_rec(G, colors, 1, [0] * len(G), solutionList)
+    # On test avec le moins de couleur possible jusqu'a avoir une solution
+    else:
+        n = 2
+        while not solutionList:
+            backtracking_rec(G, list(range(1, n)), 1, [0] * len(G), solutionList)
+            n +=1
+
+    return solutionList
