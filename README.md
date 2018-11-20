@@ -1,4 +1,5 @@
 # pyGraphs library
+[![Build Status](https://travis-ci.com/ntaff/pyGraphs.svg?branch=master)](https://travis-ci.com/ntaff/pyGraphs)
 
 This repository contain some functions for manipulating [graphs objects](https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)). 
 
