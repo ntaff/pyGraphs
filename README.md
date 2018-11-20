@@ -61,7 +61,11 @@ The librairy now contain the following files :
    - `noyau(L, G)`: Compute kernel of a graph G
    - `colorGlouton(G)`: Implement greedy coloring algorithm
    - `colorWP(G)`: Implement Welsh and Powell coloring algorithm
-
+   
+9. `topologicalSort.py`: Implement topological and level sorting algorithms
+   - `triTopologique(G)`: Implement topological sorting
+   - `triNiveaux(G)`: Implement level sorting
+   
 
 About the authors                                                  {#about}
 -----------------
