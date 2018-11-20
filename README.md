@@ -61,6 +61,9 @@ The librairy now contain the following files :
    - `noyau(L, G)`: Compute kernel of a graph G
    - `colorGlouton(G)`: Implement greedy coloring algorithm
    - `colorWP(G)`: Implement Welsh and Powell coloring algorithm
+   - `is_valid(G, i, solution)`: Verify if neighborhood of i have different colors
+   - `backtracking_rec(G, colors, i, solution, solutionList)`: Recursive backtracking function
+   - `backtracking(G, colors=None)`: Implement Backtracking coloring algorithm
    
 9. `topologicalSort.py`: Implement topological and level sorting algorithms
    - `triTopologique(G)`: Implement topological sorting
