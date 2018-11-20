@@ -1,4 +1,4 @@
-import basicsO as Oriented
+import lib.basicsO as Oriented
 
 def triTopologique(G):
 
