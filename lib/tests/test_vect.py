@@ -1,4 +1,4 @@
-import ../vect as Vector
+import lib/vect as Vector
 import unittest
 
 
