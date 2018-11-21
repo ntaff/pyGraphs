@@ -1,4 +1,7 @@
+sudo: false
+
 language: python
+
 python:
   - "3.6"
   
@@ -6,7 +9,7 @@ install:
   - pip install codecov
 
 script:
-  - coverage run lib.tests.test_vect.py
+  - coverage run tests.py
 
 after_success:
   - codecov
