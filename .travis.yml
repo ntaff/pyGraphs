@@ -6,7 +6,7 @@ install:
   - pip install codecov
 
 script:
-  - coverage run lib/tests/test_vect.py
+  - coverage test_vect.py
 
 after_success:
   - codecov
