@@ -1,8 +1,14 @@
 language: python
 python:
   - "3.6"
+  
+install:
+  - pip install codecov
+
 script:
-    -pip install codecov
-    -codecov
-    -codecov --token=<repo token>
-    -python -m unittest lib/tests/test_vect.py
+  - coverage run lib/tests/test_vect.py
+
+after_success:
+  - codecov
+  
+
