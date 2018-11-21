@@ -1,5 +1,4 @@
-import vect as Vector
-vect.path[:0] = ['../']
+import ../vect as Vector
 import unittest
 
 
