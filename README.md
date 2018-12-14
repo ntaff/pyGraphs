@@ -70,6 +70,9 @@ The librairy now contain the following files :
    - `triTopologique(G)`: Implement topological sorting
    - `triNiveaux(G)`: Implement level sorting
    
+10. `MaxFlow.py`: Implement Ford-Fulkerson algorithm
+
+   
 
 About the authors                                                  {#about}
 -----------------
